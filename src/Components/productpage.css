@@ -58,7 +58,6 @@ h2, h6{
 }
 
 #side{
-display: flex;
 position: relative;
 float: right;
 width: fit-content;
