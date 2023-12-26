@@ -29,6 +29,34 @@ h2, h6{
 .product-list >li{
     color: rgb(144, 143, 141);
 }
+.product-footer{
+    display:grid;
+    grid-template-columns: 300px auto auto;
+}
+.number-container {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: auto auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    width: fit-content;
+}
+.number{
+    font-size: 3rem;
+    font-weight: bold;
+    padding-right: 10px;
+}
+.arrow-up,
+.arrow-down {
+    width: 25px;
+    height: 25px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
 #side{
 display: flex;
 position: relative;
