@@ -1,6 +1,47 @@
 import "./productpage.css";
 import image from "../alex-haigh-fEt6Wd4t4j0-unsplash-removebg-preview.png";
 // design idea- https://in.pinterest.com/pin/618189486326098483/
+import React, { useState } from 'react';
+
+function NumberCounter() {
+  const [number, setNumber] = useState(1);
+
+  const handleIncrement = () => {
+    setNumber(number + 1);
+  };
+
+  const handleDecrement = () => {
+    setNumber(Math.max(number - 1, 1)); // Prevent going below 1
+  };
+
+  return (
+    <div className="number-container">
+        <div className="number">
+            {number}
+        </div>
+        <div className="buttons">
+          <button className="arrow-up" onClick={handleIncrement}>
+            <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512">
+              <path fill="#696969" d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z" />
+            </svg>
+          </button><br></br>
+          <button className="arrow-down" onClick={handleDecrement}>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="16"
+              width="14"
+              viewBox="0 0 448 512"
+            >
+              <path
+                fill="#696969"
+                d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"
+              />
+            </svg>
+          </button>
+        </div>
+    </div>
+  );
+}
 
 const Product=()=>{
     return (
@@ -20,7 +61,17 @@ const Product=()=>{
             </ul>
           </div>
           <div class="product-footer">
-            
+            <div class="product-color">
+                <h6>color</h6>
+            </div>
+            <div class="product-size">
+                <h6>Size</h6>
+              <NumberCounter></NumberCounter>
+            </div>
+            <div class="product-quantity">
+                <h6>Qty</h6>
+              <NumberCounter></NumberCounter>
+            </div>
           </div>
         </div>
         <div id="side">
