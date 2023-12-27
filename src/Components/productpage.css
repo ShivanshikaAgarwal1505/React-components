@@ -32,6 +32,92 @@ h2, h6{
 .product-footer{
     display:grid;
     grid-template-columns: 300px auto auto;
+    column-gap: 20px;
+}
+.color{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    row-gap: 15px;
+}
+/* Hide the default checkbox */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.container {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    font-size: 25px;
+    user-select: none;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 1.3em;
+    width: 1.3em;
+    border-radius: 50px;
+    transition: all 0.7s;
+    --spread: 20px;
+    background: black;
+}
+#black{
+    background: black;
+}
+#red{
+    background-color: red;
+}
+#yellow{
+    background-color: yellow;
+}
+#pink{
+    background-color: pink;
+}
+#blue{
+    background-color: blue;
+}
+#green{
+    background-color: green;
+}
+#brown{
+    background-color: brown;
+}
+#violet{
+    background-color: rgb(151, 8, 151);
+}
+/* When the checkbox is checked, add a blue background
+.container input:checked~.checkmark {
+    background: black;
+} */
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked~.checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+    left: 0.45em;
+    top: 0.25em;
+    width: 0.25em;
+    height: 0.5em;
+    border: solid #f0f0f0;
+    border-width: 0 0.15em 0.15em 0;
+    transform: rotate(45deg);
 }
 .number-container {
     display: grid;
@@ -39,7 +125,7 @@ h2, h6{
     justify-content: center;
     grid-template-columns: auto auto;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 10px;
     width: fit-content;
 }
@@ -56,7 +142,6 @@ h2, h6{
     background-color: transparent;
     cursor: pointer;
 }
-
 #side{
 position: relative;
 float: right;
