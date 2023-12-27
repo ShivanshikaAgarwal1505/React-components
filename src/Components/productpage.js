@@ -62,14 +62,48 @@ const Product=()=>{
           </div>
           <div class="product-footer">
             <div class="product-color">
-                <h6>color</h6>
+              <h6>color</h6>
+              <div className="color">
+                <label class="container">
+                  <input type="checkbox"></input>
+                  <div id="yellow" class="checkmark"></div>
+                </label>
+                <label class="container">
+                  <input type="checkbox"></input>
+                  <div id="pink" class="checkmark"></div>
+                </label>
+                <label class="container">
+                  <input type="checkbox"></input>
+                  <div id="black" class="checkmark"></div>
+                </label>
+                <label class="container">
+                  <input type="checkbox"></input>
+                  <div id="red" class="checkmark"></div>
+                </label>
+                <label class="container">
+                  <input type="checkbox"></input>
+                  <div id="blue" class="checkmark"></div>
+                </label>
+                <label class="container">
+                  <input type="checkbox"></input>
+                  <div id="green" class="checkmark"></div>
+                </label>
+                <label class="container">
+                  <input type="checkbox"></input>
+                  <div id="brown" class="checkmark"></div>
+                </label>
+                <label class="container">
+                  <input type="checkbox"></input>
+                  <div id="violet" class="checkmark"></div>
+                </label>
+              </div>
             </div>
             <div class="product-size">
-                <h6>Size</h6>
+              <h6>Size</h6>
               <NumberCounter></NumberCounter>
             </div>
             <div class="product-quantity">
-                <h6>Qty</h6>
+              <h6>Qty</h6>
               <NumberCounter></NumberCounter>
             </div>
           </div>
